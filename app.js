@@ -2,13 +2,14 @@
 
 var buffer = [];
 var number = '';
-var num ;
+var num;
 var operation;
-function init () {
+
+function init() {
   document.querySelector('.display').innerHTML = 0;
 };
 
-function add (a, b) {
+function add(a, b) {
   return a + b;
 };
 
@@ -16,7 +17,7 @@ function subtract(a, b) {
   return a - b;
 };
 
-function multiply (a, b) {
+function multiply(a, b) {
   return a * b;
 };
 
@@ -28,7 +29,7 @@ function clear() {
   number = '';
 };
 
-function display (dis) {
+function display(dis) {
   document.querySelector('.display').innerHTML = dis;
 };
 
@@ -42,7 +43,7 @@ function storeNumber(digit) {
   display(getNum());
 };
 
-function storeOperation (op) {
+function storeOperation(op) {
   operation = [];
   operation = [op, getNum()];
   clear();
@@ -71,15 +72,15 @@ function equals() {
   }
 };
 
- function displayEquals () {
+function displayEquals() {
   var result = equals();
   number = result.toString();
   display(parseFloat(result));
 };
 
-function displayClear () {
+function displayClear() {
   clear();
   display(0);
 };
 
-add (a, b);
+add(a, b);
